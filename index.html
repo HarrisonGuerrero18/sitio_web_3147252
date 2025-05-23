@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>TuMarca - Cultura Hip Hop</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+	<!-- Header -->
+	<header class="bg-black">
+		<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+			<h1 class="text-white text-xl font-bold">🔥 Street Verso</h1>
+			<nav class="hidden md:flex space-x-6">
+				<a href="#" class="hover:text-red-500">Inicio</a>
+				<div class="relative group">
+					<button class="hover:text-red-500">Productos</button>
+					<div class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Ropa</a>
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Accesorios</a>
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Street Gear</a>
+					</div>
+				</div>
+
+				<div class="relative group">
+					<button class="hover:text-red-500">Estilos</button>
+					<div class="absolute hidden group-hover:block bg-gray-800 mt-2 rounded shadow-lg">
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Old School</a>
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Trap / Moderno</a>
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Graffiti</a>
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Skater</a>
+						<a href="#" class="block px-4 py-2 hover:bg-gray-700">Underground</a>
+					</div>
+				</div>
+				<a href="#" class="hover:text-red-500">Comunidad</a>
+				<a href="#" class="hover:text-red-500">Blog</a>
+			</nav>
+			<a href="#" class="hidden md:block text-red-500 border border-red-500 px-4 py-2 rounded hover:bg-red-500 hover:text-white">Iniciar sesión</a>
+		</div>
+	</header>
+
+	<!-- Hero frases dinámicas -->
+	<section class="bg-gray-800 py-6 text-center text-xl font-semibold">
+		<div id="frase-hero" class="hero-phrases">
+			<span id="frase-texto">"El ritmo no se compra, se vive."</span>
+	  	</div>
+	</section>
+
+  	<!-- Contenido principal + aside productos -->
+	<main class="py-12 px-4 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+    	<!-- Principal -->
+    	<div class="lg:col-span-2">
+      			<h2 class="text-3xl font-bold mb-4 text-white">Bienvenido a Steet Verso</h2>
+      			<p class="text-gray-400 mb-6">Donde el estilo urbano, la actitud y la cultura hip hop se visten.</p>
+      
+      			<div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        			<section class="text-white px-6 py-10 max-w-4xl mx-auto">
+          				<p class="mb-6 text-lg leading-relaxed">
+							<span class="font-bold text-orange-400">En Street Verso no solo vendemos ropa, vendemos identidad.</span> Cada prenda y accesorio que encuentras aquí está inspirado en las calles, los beats y la esencia cruda del hip-hop. Nuestra tienda es un reflejo del movimiento que nació en los barrios para conquistar el mundo, y tú formas parte de esta historia cada vez que eliges vestir con flow auténtico.
+						</p>
+
+						<p class="mb-6 text-lg leading-relaxed">
+							<span class="font-bold text-orange-400">Nos mueve más que la moda: nos mueve el mensaje.</span> Street Verso apoya y representa el <span class="italic">rap conciencia</span>, el grafiti como expresión legítima y la danza como forma de resistencia. Trabajamos con marcas que respetan la cultura y también con artistas emergentes que quieren plasmar su voz en telas, vinilos y estilos. Aquí el arte no se vende barato, se respeta y se comparte.
+						</p>
+
+						<p class="text-lg leading-relaxed">
+							<span class="font-bold text-orange-400">Somos una comunidad, no un simple e-commerce.</span> Desde gorras icónicas hasta stickers, sprays, patinetas y prendas custom, Street Verso es un punto de encuentro entre lo urbano y lo consciente. Únete al movimiento, forma parte de la tribu que no sigue tendencias... las crea.
+						</p>
+        			</section>
+      			</div>
+    	</div>
+		
+		<aside class="flex flex-col justify-between h-full bg-gray-800 rounded-lg p-4 space-y-6 shadow-lg">
+			<!-- Visor dinámico -->
+			<div>
+				<h3 class="text-xl font-semibold text-white mb-4">🔥 Producto destacado</h3>
+				<div class="relative group bg-gray-900 rounded p-3 flex flex-col items-center transition-all duration-300 ease-in-out overflow-hidden">
+					<!-- Imagenn -->
+					<img id="producto-imagen" src="" alt="Producto destacado" class="mb-2 rounded max-h-60 object-contain">
+
+					<!-- Título -->
+					<p id="producto-titulo" class="text-gray-300 text-center mt-2"></p>
+
+					<!-- Flechas -->
+					<button onclick="mostrarAnteriorProducto()" 
+					class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-orange-600 hover:bg-orange-700 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+					⬅️
+					</button>
+					
+					<button onclick="mostrarSiguienteProducto()"
+					class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-orange-600 hover:bg-orange-700 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+					➡️
+					</button>
+				</div>
+			</div>
+
+			<!-- Lista de productos más vendidos -->
+			<div class="bg-gray-900 p-4 rounded">
+				<h4 class="text-orange-400 font-semibold mb-2">📈 Más vendidos</h4>
+				<ul class="text-sm text-gray-300 list-disc list-inside space-y-1">
+					<li>Gorra "Street King" 🧢</li>
+					<li>Zapatillas Urban Flux 👟</li>
+					<li>Hoodie Graffiti Soul 🧥</li>
+					<li>Camiseta Rapture Vibe 👕</li>
+					<li>Mochila Beat Runner 🎒</li>
+				</ul>
+			</div>
+
+			<!-- Tip decorativo -->
+			<div class="bg-gray-900 p-4 rounded">
+				<h4 class="text-orange-400 font-semibold mb-2">💬 Tip urbano</h4>
+				<p class="text-sm text-gray-300">“El estilo no se copia, se respira. Encuentra tu flow, no lo compres hecho.”</p>
+			</div>
+		</aside>
+    	<script src="js/scripts.js"></script>
+	</main>
+
+	<!-- Footer -->
+	<footer class="bg-black text-gray-400 py-10">
+    	<div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
+      		<div>
+        		<h3 class="text-white text-lg font-bold mb-2">🔥 Street Verso</h3>
+        		<p>Viste el ritmo. Vive la calle. Respira cultura.</p>
+      		</div>
+			<div>
+				<h4 class="text-white font-semibold mb-2">Enlaces</h4>
+				<ul class="space-y-1">
+					<li><a href="#" class="hover:text-white">Inicio</a></li>
+					<li><a href="#" class="hover:text-white">Productos</a></li>
+					<li><a href="#" class="hover:text-white">Estilos</a></li>
+					<li><a href="#" class="hover:text-white">Comunidad</a></li>
+					<li><a href="#" class="hover:text-white">Blog</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="text-white font-semibold mb-2">Legal</h4>
+				<ul class="space-y-1">
+					<li><a href="#" class="hover:text-white">Términos y condiciones</a></li>
+					<li><a href="#" class="hover:text-white">Política de privacidad</a></li>
+					<li><a href="#" class="hover:text-white">Política de devoluciones</a></li>
+					<li><a href="#" class="hover:text-white">Uso de cookies</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="text-white font-semibold mb-2">Únete al movimiento</h4>
+				<p class="mb-2">Recibe drops y contenido exclusivo.</p>
+				<form class="flex">
+					<input type="email" placeholder="Tu correo" class="w-full p-2 rounded-l bg-gray-700 text-white placeholder-gray-400" />
+					<button class="bg-red-500 px-4 rounded-r hover:bg-red-600 text-white">Suscribirme</button>
+				</form>
+				<div class="flex space-x-3 mt-4">
+					<a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+					<a href="#" class="hover:text-white"><i class="fab fa-tiktok"></i></a>
+					<a href="#" class="hover:text-white"><i class="fab fa-youtube"></i></a>
+					<a href="#" class="hover:text-white"><i class="fab fa-spotify"></i></a>
+				</div>
+			</div>
+    	</div>
+    	<div class="text-center text-sm mt-10">&copy; 2025 Street Verso. Todos los derechos reservados.</div>
+  	</footer>
+  	<script src="js/scripts.js"></script>
+</body>
+</html>
